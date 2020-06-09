@@ -32,7 +32,7 @@ namespace OOM_seminar_builder
         {
             Console.WriteLine($"<?xml version=\"1.0\" encoding=\"UTF - 8\"?> \n" +
                              $"<Person>\n" +
-                             $"\t<LastName>{fo.DateOfBirth.ToShortDateString()}</LastName>\n" +
+                             $"\t<DateOfBirth>{fo.DateOfBirth.ToShortDateString()}</DateOfBirth>\n" +
                              $"</Person>");
             Console.WriteLine();
         }

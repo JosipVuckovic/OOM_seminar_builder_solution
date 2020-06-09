@@ -19,6 +19,11 @@ namespace OOM_seminar_builder
             Console.WriteLine(outputXml);
             Console.WriteLine();
 
+            JsonBuilder jsbuild = new JsonBuilder("test", "test", new DateTime(2000, 5, 7));
+            var tmp = director.Create(jsbuild);
+            Console.WriteLine(tmp);
+            Console.WriteLine();
+
 
         }
     }
