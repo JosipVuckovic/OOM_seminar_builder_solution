@@ -9,13 +9,15 @@ namespace OOM_seminar_builder
             FormatBuilder builder;
             var director = new BuilderDirecotr();
 
-            builder = new JsonBuilder();
+            builder = new JsonBuilder("Jane","Doe", new DateTime(2020,6,9));
             var outputJson = director.Create(builder);
             Console.WriteLine(outputJson);
+            Console.WriteLine();
 
-            builder = new XmlBuilder();
+            builder = new XmlBuilder("Jon", "Doe", new DateTime(2020,6,9));
             var outputXml = director.Create(builder);
             Console.WriteLine(outputXml);
+            Console.WriteLine();
 
 
         }

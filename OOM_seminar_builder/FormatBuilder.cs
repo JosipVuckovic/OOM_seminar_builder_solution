@@ -9,9 +9,9 @@ namespace OOM_seminar_builder
     {
         public string Create(FormatBuilder formatBuilder)
         {
-            formatBuilder.AddFirstName();
-            formatBuilder.AddLastName();
-            formatBuilder.AddDateOfBirth();
+            formatBuilder.PrintFirstName();
+            formatBuilder.PrintLastName();
+            formatBuilder.PrintDateofBirth();
             return formatBuilder.PrintPersonAll();
         }
     }
@@ -19,13 +19,10 @@ namespace OOM_seminar_builder
 
     //Abstract builder
     public abstract class FormatBuilder
-    {
-        public string FirstName;
-        public string LastName;
-        public DateTime DateOfBirth;
-        public abstract void AddFirstName();
-        public abstract void AddLastName();
-        public abstract void AddDateOfBirth();
+    {       
+        public abstract void PrintFirstName();
+        public abstract void PrintLastName();
+        public abstract void PrintDateofBirth();
         public abstract string PrintPersonAll();
 
         protected Person fo;

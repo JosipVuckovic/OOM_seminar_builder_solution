@@ -6,28 +6,32 @@ namespace OOM_seminar_builder
 {
     public class JsonBuilder : FormatBuilder
     {
-        public JsonBuilder()
+        public JsonBuilder(string fname, string lname, DateTime dateBirth)
         {
-            fo = new Person("Json");
-        }
-        public override void AddDateOfBirth()
-        {
-            fo.DateOfBirth = DateTime.Now;
+            fo = new Person(fname, lname, dateBirth);
         }
 
-        public override void AddFirstName()
+        public override void PrintDateofBirth()
         {
-            fo.FirstName = "John";
+            Console.WriteLine($"[{{\"FirstName\": \"{fo.FirstName}\"}}]");
+            Console.WriteLine();
         }
 
-        public override void AddLastName()
+        public override void PrintFirstName()
         {
-            fo.LastName = "Doe";
+            Console.WriteLine($"[{{\"LastName\": \"{fo.LastName}\"}}]");
+            Console.WriteLine();
+        }
+
+        public override void PrintLastName()
+        {
+            Console.WriteLine($"[{{\"DateOfBirth\": \"{fo.DateOfBirth.ToShortDateString()}\"}}]");
+            Console.WriteLine();
         }
 
         public override string PrintPersonAll()
         {
-            return new string($"[{{\"FirstName\": \"{fo.FirstName}\" , \"LastName\": \"{fo.LastName}\" , \"DateOfBirth\": \"{fo.DateOfBirth}\"}}]");
+            return new string($"[{{\"FirstName\": \"{fo.FirstName}\" , \"LastName\": \"{fo.LastName}\" , \"DateOfBirth\": \"{fo.DateOfBirth.ToShortDateString()}\"}}]");
         }
     }
 }

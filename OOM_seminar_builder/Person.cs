@@ -5,15 +5,16 @@ using System.Text;
 namespace OOM_seminar_builder
 {
     public class Person
-    {
-        private string _type;
+    {        
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
 
-        public Person(string type)
+        public Person(string fname, string lname, DateTime dateBirth)
         {
-            _type = type;
+            FirstName = fname;
+            LastName = lname;
+            DateOfBirth = dateBirth;
         }
     }
 }

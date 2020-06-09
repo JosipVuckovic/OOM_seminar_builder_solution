@@ -6,24 +6,35 @@ namespace OOM_seminar_builder
 {
     public class XmlBuilder : FormatBuilder
     {
-        public XmlBuilder()
+        public XmlBuilder(string fname, string lname, DateTime dateBirth)
         {
-            fo = new Person("Xml");
+            fo = new Person(fname, lname, dateBirth);
+        }
+        public override void PrintDateofBirth()
+        {
+           Console.WriteLine($"<?xml version=\"1.0\" encoding=\"UTF - 8\"?> \n" +
+                             $"<Person>\n" +
+                             $"\t<FirstName>{fo.FirstName}</FirstName>\n" +                           
+                             $"</Person>");
+            Console.WriteLine();
         }
 
-        public override void AddDateOfBirth()
+        public override void PrintFirstName()
         {
-            fo.DateOfBirth = DateTime.Now;
+            Console.WriteLine($"<?xml version=\"1.0\" encoding=\"UTF - 8\"?> \n" +
+                             $"<Person>\n" +
+                             $"\t<LastName>{fo.LastName}</LastName>\n" +
+                             $"</Person>");
+            Console.WriteLine();
         }
 
-        public override void AddFirstName()
+        public override void PrintLastName()
         {
-            fo.FirstName = "John";
-        }
-
-        public override void AddLastName()
-        {
-            fo.LastName = "Doe";
+            Console.WriteLine($"<?xml version=\"1.0\" encoding=\"UTF - 8\"?> \n" +
+                             $"<Person>\n" +
+                             $"\t<LastName>{fo.DateOfBirth.ToShortDateString()}</LastName>\n" +
+                             $"</Person>");
+            Console.WriteLine();
         }
 
         public override string PrintPersonAll()
@@ -32,8 +43,8 @@ namespace OOM_seminar_builder
                              $"<Person>\n" +
                              $"\t<FirstName>{fo.FirstName}</FirstName>\n" +
                              $"\t<LastName>{fo.LastName}</LastName>\n " +
-                             $"\t<DateOfBirth>{fo.DateOfBirth}</DateOfBirth>\n" +
-                             $"</Person>");
+                             $"\t<DateOfBirth>{fo.DateOfBirth.ToShortDateString()}</DateOfBirth>\n" +
+                             $"</Person>");           
         }
     }
 }
