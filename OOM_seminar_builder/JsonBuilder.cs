@@ -11,19 +11,19 @@ namespace OOM_seminar_builder
             fo = new Person(fname, lname, dateBirth);
         }
 
-        public override void PrintDateofBirth()
+        public override void PrintFirstName()
         {
             Console.WriteLine($"[{{\"FirstName\": \"{fo.FirstName}\"}}]");
             Console.WriteLine();
         }
 
-        public override void PrintFirstName()
+        public override void PrintLastName()
         {
             Console.WriteLine($"[{{\"LastName\": \"{fo.LastName}\"}}]");
             Console.WriteLine();
         }
 
-        public override void PrintLastName()
+        public override void PrintDateofBirth()
         {
             Console.WriteLine($"[{{\"DateOfBirth\": \"{fo.DateOfBirth.ToShortDateString()}\"}}]");
             Console.WriteLine();

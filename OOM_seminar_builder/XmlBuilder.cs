@@ -10,7 +10,7 @@ namespace OOM_seminar_builder
         {
             fo = new Person(fname, lname, dateBirth);
         }
-        public override void PrintDateofBirth()
+        public override void PrintFirstName()
         {
            Console.WriteLine($"<?xml version=\"1.0\" encoding=\"UTF - 8\"?> \n" +
                              $"<Person>\n" +
@@ -19,7 +19,7 @@ namespace OOM_seminar_builder
             Console.WriteLine();
         }
 
-        public override void PrintFirstName()
+        public override void PrintLastName()
         {
             Console.WriteLine($"<?xml version=\"1.0\" encoding=\"UTF - 8\"?> \n" +
                              $"<Person>\n" +
@@ -28,7 +28,7 @@ namespace OOM_seminar_builder
             Console.WriteLine();
         }
 
-        public override void PrintLastName()
+        public override void PrintDateofBirth()
         {
             Console.WriteLine($"<?xml version=\"1.0\" encoding=\"UTF - 8\"?> \n" +
                              $"<Person>\n" +
